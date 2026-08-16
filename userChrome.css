@@ -12,6 +12,7 @@
   --panel-menuitem-margin-inline: 8px !important;
   --panel-menuitem-padding-block: 8px !important;
   --panel-separator-padding-inline: 8px !important;
+  --panel-separator-color: var(--pbc) !important;
   --sidebar-background-color: transparent !important;
   --sidebar-launcher-button-padding-inline: 5.5px !important;
   --toolbarbutton-padding-inner: calc((var(--tab-min-height) - 16px) / 2) !important;
