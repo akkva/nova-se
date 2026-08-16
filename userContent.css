@@ -1,0 +1,68 @@
+/*  github.com/akkva/nova-se  */
+
+:root {
+  --newtab-background-color-secondary: var(--background-color-box) !important;
+  --newtab-background-card: var(--background-color-box) !important;
+  --input-text-border-color: var(--pbc) !important;
+  --border-color: var(--pbc) !important;
+  --border-color-interactive: var(--pbc) !important;
+  --pbs: 0 2px 15px rgba(0, 0, 0, .2), 0 0 0 1px rgba(0, 0, 0, .058);
+  --pbc: light-dark(rgba(0, 0, 0, .12), rgba(225, 225, 225, .08));
+}
+
+@-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
+body {
+  --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
+  background-color: transparent !important;
+}
+
+.search-inner-wrapper {
+  max-width: 650px !important;
+}
+
+.context-menu {
+  border-radius: var(--panel-menuitem-border-radius) !important;
+  padding: 6px !important;
+  box-shadow: var(--pbs) !important;
+@media (prefers-color-scheme: dark) {
+  border: 1px solid rgba(225, 225, 225, .08) !important;
+}
+}
+
+.context-menu > ul {
+  padding: 0 !important;
+}
+
+.context-menu > ul > li > a,
+.context-menu > ul > li > button {
+  border-radius: var(--panel-menuitem-border-radius) !important;
+  padding: 6px 12px !important;
+&:is(:focus, :hover) {
+  background-color: var(--button-background-color-menu-hover) !important;
+}
+}
+
+.context-menu > ul > li.separator {
+  border-bottom: 1px solid var(--pbc) !important;
+}
+
+.customize-menu {
+  --customize-menu-bg: var(--background-color-box) !important;
+  margin: 16px !important;
+  height: calc(100% - 16px) !important;
+  min-height: unset !important;
+}
+
+.confirmation-dialog::backdrop, .modalOverlayOuter::backdrop {
+  background: none !important;
+}
+
+.customize-menu, .modalOverlayOuter, .confirmation-dialog {
+  box-shadow: var(--pbs) !important;
+  border-radius: var(--panel-border-radius) !important;
+  border: none !important;
+@media (prefers-color-scheme: dark) {
+  border: 1px solid rgba(225, 225, 225, .08) !important;
+}
+}
+}
