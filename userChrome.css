@@ -493,14 +493,14 @@ panel#feature-callout,
   --panel-background-color: var(--background-color-box) !important;
   --panel-box-shadow: var(--pbs) !important;
   --panel-box-shadow-margin: 18px !important;
-  --panel-border-radius: 26px !important;
+  --panel-border-radius: 50px !important;
   --panel-border-color: transparent !important;
   --panel-text-color: #000 !important;
 @media (prefers-color-scheme: dark) {
   --panel-border-color: rgba(225, 225, 225, .08) !important;
   --panel-text-color: #fff !important;
 }
-  scale: .75;
+  scale: .65;
 }
 
 .ctrlTab-preview-inner {
@@ -526,16 +526,15 @@ panel#feature-callout,
 
 .ctrlTab-preview, #ctrlTab-showAll {
   text-shadow: none !important;
-  font-size: 16px !important;
+  font-size: 18.5px !important;
   font-weight: normal !important;
 }
 
-.ctrlTab-preview:focus > .ctrlTab-preview-inner {
-  border: none !important;
-}
-
-#ctrlTab-showAll:focus {
-  border-color: var(--focus-outline-color) !important;
+#ctrlTab-showAll:focus, .ctrlTab-preview:focus > .ctrlTab-preview-inner {
+  border-color: transparent !important;
+  color: var(--focus-outline-color) !important;
+  font-size: 19px !important;
+  font-weight: bold !important;
 }
 
 .searchmode-switcher-panel-list {
@@ -824,8 +823,9 @@ toolbarbutton {
 #blocked-permissions-container, #picture-in-picture-button,
 .private-browsing-indicator-with-label,
 #reset-pbm-toolbar-button, .sharing-icon,
-#firefox-view-button, #fxa-toolbar-menu-button,
-#userContext-icons, #userContext-label {
+#firefox-view-button, #wrapper-firefox-view-button,
+#userContext-icons, #userContext-label,
+#fxa-toolbar-menu-button {
   display: none !important;
 }
 
@@ -999,4 +999,3 @@ tab-split-view-wrapper {
   order: 1;
 }
 }
-
