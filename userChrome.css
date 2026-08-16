@@ -7,7 +7,6 @@
   --tab-min-height: 32px !important;
   --tab-inline-padding: 8px !important;
   --tab-margin-block: 6px !important;
-  --tab-inner-inline-margin: var(--space-medium) !important;
   --tab-group-line-toolbar-border-distance: 1px !important;
   --panel-subview-body-padding-block: 8px !important;
   --panel-menuitem-margin-inline: 8px !important;
@@ -15,12 +14,6 @@
   --panel-separator-padding-inline: 8px !important;
   --sidebar-background-color: transparent !important;
   --sidebar-launcher-button-padding-inline: 5.5px !important;
-  --sidebar-panel-list-item-height: var(--size-item-large) !important;
-  --sidebar-panel-subheading-min-height: auto !important;
-  --sidebar-panel-subheading-padding-block: var(--space-medium) !important;
-  --sidebar-panel-header-heading-margin-block: var(--space-large) !important;
-  --sidebar-panel-scrollable-margin-inline-end: 0 !important;
-  --sidebar-panel-scrollable-padding-inline-end: var(--space-xsmall) !important;
   --toolbarbutton-padding-inner: calc((var(--tab-min-height) - 16px) / 2) !important;
   --input-text-background-color: light-dark(rgba(255, 255, 255, .55), rgba(255, 255, 255, .15)) !important;
   --input-text-border-color: var(--pbc) !important;
@@ -280,12 +273,6 @@ split-view-footer {
   visibility: unset !important;
   border: none !important;
   height: 28px !important;
-  padding-inline: var(--space-small) !important;
-  --toolbarbutton-padding-outer: 2px !important;
-}
-
-toolbarbutton.bookmark-item:not(.subviewbutton) {
-  margin-inline: 2px !important;
 }
 
 #sidebar {
@@ -318,7 +305,7 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 }
 }
 
-#sidebar-splitter, #sidebar-container:not([sidebar-panel-open]) + #sidebar-launcher-splitter {
+#sidebar-splitter {
   width: 5px !important;
   margin-inline: calc(-1 * var(--chrome-window-gap) + 1px) !important;
 }
