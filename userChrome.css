@@ -443,13 +443,13 @@ menupopup, panel[type="arrow"], .toolbar-menupopup {
   --panel-box-shadow: var(--pbs) !important;
   --panel-box-shadow-margin: 18px !important;
   --panel-border-color: transparent !important;
+  --panel-background-color: var(--background-color-box) !important;
 @media (prefers-color-scheme: dark) {
   --panel-border-color: rgba(225, 225, 225, .08) !important;
 }
 }
 
 menupopup {
-  --panel-background-color: var(--background-color-box) !important;
   --panel-border-radius: var(--panel-menuitem-border-radius) !important;
   appearance: none !important;
 }
