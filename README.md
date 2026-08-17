@@ -19,6 +19,7 @@
 | `widget.windows.mica.toplevel-backdrop` | 2 |
 3. Restart Firefox.
 
-## Notes
+## Configuration
 - This theme is compatible with Firefox 155+ on Windows.
 - Mica: Requires enabling the "Default" Firefox theme.
+- Auto-hide bookmarks toolbar: Create Boolean `nova.toolbar` in `about:config`.
