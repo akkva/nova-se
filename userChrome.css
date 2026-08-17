@@ -1005,3 +1005,31 @@ tab-split-view-wrapper {
   order: 1;
 }
 }
+
+@media -moz-pref("nova.toolbar") {
+:has(#PersonalToolbar:not([collapsed])) {
+#browser {
+  margin-top: -28px;
+}
+
+#PersonalToolbar:not([customizing]) {
+  position: relative;
+  width: 100%;
+  background-color: var(--background-color-box) !important;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: transform 105ms linear 500ms !important;
+  z-index: 8;
+}
+
+#navigator-toolbox:hover:not(:has(#toolbar-menubar:hover, .titlebar-button:hover, .toolbarbutton-1:hover, #urlbar:hover, .tabbrowser-tab:hover, .tab-group-label:hover)) > #PersonalToolbar {
+  transform: rotateX(0deg);
+}
+
+:has(#tabbrowser-tabs[movingtab]), :has(#PersonalToolbar .bookmark-item[open], #PersonalToolbar #PlacesChevron:is(:hover, [open])) {
+#PersonalToolbar {
+  transform: rotateX(0deg);
+}
+}
+}
+}
