@@ -4,6 +4,7 @@
 <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/44749699-1621-4d3f-8c7b-692047ad081f">
 <img alt="Preview">
 </picture><br><br>
+<p>This theme is compatible with Firefox 155+ on Windows</p>
 </div>
 
 ## Installation
@@ -20,6 +21,5 @@
 3. Restart Firefox.
 
 ## Configuration
-- This theme is compatible with Firefox 155+ on Windows.
 - Mica: Requires enabling the "Default" Firefox theme.
 - Auto-hide bookmarks toolbar: Create Boolean `nova.toolbar` in `about:config`.
