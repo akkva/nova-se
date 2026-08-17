@@ -1,7 +1,7 @@
 <div align="center">
 <picture>
-<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/134af5af-6a0a-465f-b951-a2eb7f11515e">
-<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/44749699-1621-4d3f-8c7b-692047ad081f">
+<source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/a87911cf-ee54-4738-890d-6d5bbd2e20b0">
+<source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/d065efb6-7f16-4146-b8b8-ff65c72e3159">
 <img alt="Preview">
 </picture><br><br>
 <p>This theme is compatible with Firefox 155+ on Windows</p>
