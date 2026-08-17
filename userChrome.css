@@ -400,6 +400,9 @@ split-view-footer {
   margin-inline-end: calc(var(--sidebar-launcher-collapsed-width) + 8px) !important;
 }
 }
+#vertical-tabs-newtab-button {
+  margin-block-end: 5px !important;
+}
 }
 
 #main-button {
@@ -489,6 +492,10 @@ panel#feature-callout,
 > canvas {
   border: 1px solid var(--pbc) !important;
 }
+}
+
+#confirmation-hint {
+  --panel-background-color: var(--button-background-color-primary) !important;
 }
 
 #ctrlTab-panel {
