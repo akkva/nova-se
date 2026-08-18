@@ -10,6 +10,8 @@
   --pbc: light-dark(rgba(0, 0, 0, .12), rgba(225, 225, 225, .08));
 }
 
+* { --page-nav-hr-background-color: var(--pbc) !important; }
+
 @-moz-document url-prefix("about:newtab"), url-prefix("about:home") {
 body {
   --newtab-search-icon: url("chrome://global/skin/icons/search-glass.svg") !important;
