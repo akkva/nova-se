@@ -561,6 +561,9 @@ panel#feature-callout,
 .searchmode-switcher {
   height: 24px !important;
   width: 48px !important;
+.urlbar:not(#searchbar-new)[searchmode] & {
+  width: unset !important;
+}
 > .searchmode-switcher-content {
   margin-inline-start: 70px;
 &::before {
@@ -570,15 +573,18 @@ panel#feature-callout,
   margin-inline-start: -65px;
   margin-block-start: 2px;
 }
+.urlbar:not(#searchbar-new)[searchmode] & {
+  margin-inline-start: 45px;
+&::before {
+  content: "";
+  margin-inline-start: -50px;
+}
+}
 }
 }
 
 .searchmode-switcher-dropmarker, .searchmode-switcher-close {
   fill: var(--toolbarbutton-icon-fill) !important;
-}
-
-.searchmode-switcher-title {
-  display: none !important;
 }
 
 #unified-extensions-view {
