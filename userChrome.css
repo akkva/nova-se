@@ -1046,3 +1046,31 @@ tab-split-view-wrapper {
 }
 }
 }
+
+@media -moz-pref("nova.urlbar") and (not -moz-pref("sidebar.verticalTabs")) {
+#urlbar-container {
+  transition: max-width .25s !important;
+  max-width: 28px !important;
+#urlbar {
+  background-image: url("chrome://global/skin/icons/search-glass.svg");
+  background-repeat: no-repeat;
+  background-position: left 4px bottom 8px;
+  -moz-context-properties: fill;
+  fill: var(--toolbarbutton-icon-fill);
+.urlbar-background, .urlbar-page-action, .identity-box-button, #notification-popup-box,
+#identity-permission-box, #trust-icon-container, #identity-box, .urlbar-go-button, #urlbar-revert-button-container, .searchmode-switcher {
+  visibility: hidden !important;
+}
+}
+&:has(#urlbar:is(:hover, [focused], [open]), .urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #trust-icon-container[open]) {
+  max-width: 315px !important;
+#urlbar {
+  background-image: none;
+.urlbar-background, .urlbar-page-action, .identity-box-button, #notification-popup-box,
+#identity-permission-box, #trust-icon-container, #identity-box, .urlbar-go-button, #urlbar-revert-button-container, .searchmode-switcher {
+  visibility: visible !important;
+}
+}
+}
+}
+}
