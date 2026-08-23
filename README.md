@@ -21,5 +21,7 @@
 3. Restart Firefox.
 
 ## Configuration
-- Mica: Requires enabling the "Default" Firefox theme.
-- Auto-hide bookmarks toolbar: Create Boolean `nova.toolbar` in `about:config`.
+- Mica effect: Requires enabling the "Default" Firefox theme.
+- Advanced Options (Create as Boolean in `about:config`):
+  - `nova.toolbar` — Auto-hide bookmarks toolbar.
+  - `nova.urlbar` — Auto-collapse address bar when using horizontal tabs.
