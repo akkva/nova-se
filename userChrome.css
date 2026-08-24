@@ -182,6 +182,18 @@ split-view-footer {
 #nav-bar {
   width: fit-content !important;
   grid-area: 2 / 1 / auto / auto;
+@media -moz-pref("nova.toolbar") {
+&::after {
+  content: "";
+  position: fixed;
+  top: 40px;
+  left: 45px;
+  width: 100%;
+  height: 10px;
+  z-index: 9;
+  background: none;
+}
+}
 }
 
 #TabsToolbar {
@@ -1063,6 +1075,16 @@ tab-split-view-wrapper {
 }
 }
 &:has(#urlbar:is(:hover, [focused], [open]), .urlbar-page-action[open], .identity-box-button[open], #notification-popup-box[open], #trust-icon-container[open]) {
+  max-width: 315px !important;
+#urlbar {
+  background-image: none;
+.urlbar-background, .urlbar-page-action, .identity-box-button, #notification-popup-box,
+#identity-permission-box, #trust-icon-container, #identity-box, .urlbar-go-button, #urlbar-revert-button-container, .searchmode-switcher {
+  visibility: visible !important;
+}
+}
+}
+@media (max-width: 650px) {
   max-width: 315px !important;
 #urlbar {
   background-image: none;
