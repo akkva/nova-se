@@ -90,7 +90,7 @@ body {
   margin: 2px 8px 8px 8px !important;
   border-radius: var(--border-radius-medium) !important;
   outline: 1px solid var(--pbc) !important;
-:has([sidebar-shown]) & {
+:root:has([sidebar-shown]) & {
 &[column="0"] {
   margin-left: 0 !important;
 }
@@ -1032,7 +1032,7 @@ tab-split-view-wrapper {
 }
 
 @media -moz-pref("nova.toolbar") {
-:has(#PersonalToolbar:not([collapsed])) {
+:root:not([taskbartab]):has(#PersonalToolbar:not([collapsed])) {
 #browser {
   margin-top: -28px;
 }
@@ -1051,7 +1051,7 @@ tab-split-view-wrapper {
   transform: rotateX(0deg);
 }
 
-:has(#tabbrowser-tabs[movingtab]), :has(#PersonalToolbar .bookmark-item[open], #PersonalToolbar #PlacesChevron:is(:hover, [open])) {
+&:has(#tabbrowser-tabs[movingtab]), &:has(#PersonalToolbar .bookmark-item[open], #PersonalToolbar #PlacesChevron:is(:hover, [open])) {
 #PersonalToolbar {
   transform: rotateX(0deg);
 }
@@ -1060,6 +1060,7 @@ tab-split-view-wrapper {
 }
 
 @media -moz-pref("nova.urlbar") and (not -moz-pref("sidebar.verticalTabs")) {
+:root:not([taskbartab]) {
 #urlbar-container {
   transition: max-width .25s .5s !important;
   max-width: 28px !important;
@@ -1099,6 +1100,7 @@ tab-split-view-wrapper {
 #identity-permission-box, #trust-icon-container, #identity-box, .urlbar-go-button, #urlbar-revert-button-container, .searchmode-switcher {
   opacity: 1 !important;
   transition: none !important;
+}
 }
 }
 }
