@@ -47,15 +47,6 @@ body {
 
 #nav-bar {
   min-height: 43px !important;
-@media -moz-pref("sidebar.verticalTabs") {
-  padding-inline-end: 105px !important;
-}
-:root[taskbartab] & {
-  padding-inline-end: 65px !important;
-@media -moz-pref("sidebar.verticalTabs") {
-  padding-inline-end: 105px !important;
-}
-}
 }
 
 #nav-bar, #sidebar-container, #navigator-toolbox, #PersonalToolbar {
@@ -115,11 +106,12 @@ split-view-footer {
 }
 
 .titlebar-buttonbox-container {
-  position: fixed !important;
-  right: 0;
-  top: 0;
-  padding-block-start: 6px !important;
+  padding-block: 6px !important;
   padding-inline-end: 6px !important;
+  display: none !important;
+#nav-bar & {
+  display: flex !important;
+}
 }
 
 .titlebar-button {
@@ -160,28 +152,19 @@ split-view-footer {
 
 @media not -moz-pref("sidebar.verticalTabs") {
 :root:not([chromehidden~="toolbar"], [chromehidden~="location"], [taskbartab]) {
-  --btn-step: 40px;
-  --menu-base-pos: 105px;
-
 .titlebar-spacer, #nav-bar:not([customizing]) toolbarspring, #wrapper-customizableui-special-spring3, #customizableui-special-spring3 {
-  display: none !important;
-}
-
-#nav-bar-customization-target > toolbarbutton:nth-last-child(3) {
-  margin-inline-end: 5px !important;
+  visibility: collapse;
 }
 
 #navigator-toolbox {
-  display: grid;
-  grid-template-columns: minmax(auto, 0) auto;
-> *:not(#TabsToolbar, #nav-bar) {
-  grid-column: 1 / span 2 !important;
-}
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 #nav-bar {
-  width: fit-content !important;
-  grid-area: 2 / 1 / auto / auto;
+  order: -1;
+  flex: auto;
 @media -moz-pref("nova.toolbar") {
 &::after {
   content: "";
@@ -196,37 +179,34 @@ split-view-footer {
 }
 }
 
+#urlbar-container {
+  flex: 0 0 315px !important;
+  anchor-name: --urlbar;
+  margin-inline-start: 4px !important;
+  margin-inline-end: auto !important;
+@media (max-width: 650px) {
+:root:not([customizing]):has(#nav-bar:is([nonemptyoverflow], [overflowing])) & {
+  flex: 0 0 287px !important;
+}
+}
+:root[customizing] & {
+  flex: 0 0 231px !important;
+}
+}
+
+#urlbar-container ~ :not(#urlbar-container ~ :not([hidden]) ~ *), #wrapper-urlbar-container ~ :not(#wrapper-urlbar-container ~ :not([hidden]) ~ *) {
+  anchor-name: --navbar;
+}
+
 #TabsToolbar {
-  grid-area: 2 / 2 / auto / auto;
-  margin-inline-start: -2px !important;
-  --extension-offset: 0px;
-  --overflow-offset: 0px;
-:root:has(#unified-extensions-button[hidden]) & { --extension-offset: -34px; }
-:root:has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & { --overflow-offset: 34px; }
-  padding-inline-end: calc(var(--menu-base-pos) + 74px + var(--extension-offset) + var(--overflow-offset)) !important;
+  position: absolute;
+  position-anchor: --urlbar;
+  top: 0;
+  left: calc(anchor(right) + 3px);
+  right: anchor(--navbar left);
 &:-moz-window-inactive {
   opacity: 1 !important;
 }
-}
-
-#PanelUI-menu-button {
-  position: fixed !important;
-  top: 6px;
-  inset-inline-end: var(--menu-base-pos) !important;
-}
-
-#nav-bar-overflow-button {
-  position: fixed !important;
-  top: 6px;
-  inset-inline-end: calc(var(--menu-base-pos) + var(--btn-step)) !important;
-}
-
-#unified-extensions-button {
-  position: fixed !important;
-  top: 6px;
-  --overflow-offset: 0px;
-:root:has(#nav-bar-overflow-button:not(#nav-bar:not([overflowing], [nonemptyoverflow], [customizing]) > #nav-bar-overflow-button)) & { --overflow-offset: 34px; }
-  inset-inline-end: calc(var(--menu-base-pos) + var(--btn-step) + var(--overflow-offset)) !important;
 }
 
 &:not([customizing]) {
@@ -286,6 +266,7 @@ split-view-footer {
   visibility: unset !important;
   border: none !important;
   height: 28px !important;
+  width: 100%;
 }
 
 #sidebar {
