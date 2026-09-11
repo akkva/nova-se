@@ -25,7 +25,7 @@
 ## Configuration
 
 - Mica effect: Requires enabling the "Default" Firefox theme.
-- Create these preferences in 'about:config' to modify the UI:
+- Create these preferences in `about:config` to modify the UI:
 
 | Preference | Description |
 | :--- | :--- |
