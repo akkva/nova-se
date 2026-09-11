@@ -8,22 +8,28 @@
 </div>
 
 ## Installation
+
 1. Move the theme files into your profile's `chrome` folder.
 2. Configure `about:config` with these preferences:
 
 | Preference | Value |
 | :--- | :--- |
-| `toolkit.legacyUserProfileCustomizations.stylesheets` | true |
-| `svg.context-properties.content.enabled` | true |
-| `browser.tabs.allow_transparent_browser` | true |
-| `widget.windows.mica` | true |
-| `widget.windows.mica.toplevel-backdrop` | 2 |
+| `toolkit.legacyUserProfileCustomizations.stylesheets` | `true` |
+| `svg.context-properties.content.enabled` | `true` |
+| `browser.tabs.allow_transparent_browser` | `true` |
+| `widget.windows.mica` | `true` |
+| `widget.windows.mica.toplevel-backdrop` | `2` |
+
 3. Restart Firefox.
 
 ## Configuration
+
 - Mica effect: Requires enabling the "Default" Firefox theme.
-- Advanced Options (Create as Boolean in `about:config`):
-  - `nova.toolbar` — Auto-hide bookmarks toolbar.
-  - `nova.tb` — Auto-collapse window controls.
-  - `nova.urlbar` — Auto-collapse address bar when using horizontal tabs.
-  - `nova.urlbar.popup` — Breakout address bar popup.
+- Create these preferences in 'about:config' to modify the UI:
+
+| Preference | Description |
+| :--- | :--- |
+| `nova.toolbar` | Auto-hide bookmarks toolbar. |
+| `nova.tb` | Auto-collapse window controls. |
+| `nova.urlbar` | Auto-collapse address bar when using horizontal tabs. |
+| `nova.urlbar.popup` | Breakout address bar popup. |
