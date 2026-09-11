@@ -33,3 +33,5 @@
 | `nova.tb` | Auto-collapse window controls. |
 | `nova.urlbar` | Auto-collapse address bar when using horizontal tabs. |
 | `nova.urlbar.popup` | Breakout address bar popup. |
+> [!NOTE]
+> Required for East Asian (CJK) input: Enable "Address Bar: show results during IME composition" in `Settings` > `Firefox Labs` when `nova.urlbar.popup` is enabled.
