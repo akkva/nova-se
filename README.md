@@ -24,4 +24,6 @@
 - Mica effect: Requires enabling the "Default" Firefox theme.
 - Advanced Options (Create as Boolean in `about:config`):
   - `nova.toolbar` — Auto-hide bookmarks toolbar.
+  - `nova.tb` — Auto-collapse window controls.
   - `nova.urlbar` — Auto-collapse address bar when using horizontal tabs.
+  - `nova.urlbar.popup` — Breakout address bar popup.
