@@ -466,6 +466,17 @@ menupopup {
   appearance: none !important;
 }
 
+menupopup[needsgutter] .menuitem-iconic::before {
+  width: 16px;
+  height: 16px;
+  content: "";
+  padding-inline-end: 8px;
+}
+
+.menu-icon[srcset^="moz-extension://"] {
+  display: none;
+}
+
 toolbarseparator::before {
   border-top: 1px solid var(--pbc) !important;
   margin: 0 8px 0 !important;
